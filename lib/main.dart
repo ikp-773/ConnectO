@@ -1,5 +1,6 @@
 import 'package:connecto/screens/authentication/welcome.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return GetMaterialApp(
       theme: ThemeData.dark().copyWith(
+          primaryColor: Colors.purple,
           colorScheme:
               ColorScheme.fromSwatch().copyWith(secondary: Colors.purple)),
       home: const WelcomePage(),
