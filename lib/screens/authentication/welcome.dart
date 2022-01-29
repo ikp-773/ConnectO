@@ -58,7 +58,10 @@ class WelcomePage extends StatelessWidget {
                 SizedBox(height: 70),
                 InkWell(
                   onTap: () {
-                    Get.to(SignInPage());
+                    Get.to(
+                      SignInPage(),
+                      transition: Transition.leftToRightWithFade,
+                    );
                   },
                   child: Container(
                     height: 45,
@@ -85,7 +88,10 @@ class WelcomePage extends StatelessWidget {
                 SizedBox(height: 50),
                 InkWell(
                   onTap: () {
-                    Get.to(LogInPage());
+                    Get.to(
+                      LogInPage(),
+                      transition: Transition.leftToRightWithFade,
+                    );
                   },
                   child: Container(
                     height: 45,

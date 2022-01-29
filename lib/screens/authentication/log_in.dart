@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:connecto/screens/authentication/log_in.dart';
+import 'package:connecto/screens/authentication/sign_in.dart';
 import 'package:connecto/screens/authentication/widgets/password_fields.dart';
+import 'package:connecto/screens/user_home.dart/home.dart';
 import 'package:connecto/styling/colors.dart';
 import 'package:connecto/styling/text_fields.dart';
 import 'package:connecto/styling/text_styles.dart';
@@ -93,7 +95,7 @@ class LogInPage extends StatelessWidget {
               SizedBox(height: 45),
               InkWell(
                 onTap: () {
-                  Get.to(LogInPage());
+                  Get.to(HomePageUser(), transition: Transition.cupertino);
                 },
                 child: Container(
                   height: 45,
@@ -129,7 +131,10 @@ class LogInPage extends StatelessWidget {
                             fontWeight: FontWeight.w600, color: Colors.white),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.off(LogInPage());
+                            Get.off(
+                              SignInPage(),
+                              transition: Transition.leftToRightWithFade,
+                            );
                           }),
                   ],
                 ),
