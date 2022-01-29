@@ -2,6 +2,7 @@
 
 import 'package:connecto/screens/user_home.dart/home_data.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class UserProfilePage extends StatelessWidget {
   const UserProfilePage({Key? key}) : super(key: key);
@@ -23,10 +24,9 @@ class UserProfilePage extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         child: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(18, 10, 20, 0),
+                padding: EdgeInsets.fromLTRB(18, 10, 20, 20),
                 child: Row(
                   children: [
                     Padding(
@@ -36,68 +36,101 @@ class UserProfilePage extends StatelessWidget {
                         height: 35,
                       ),
                     ),
+                    SizedBox(width: Get.width / 4.5),
                     Text(
-                      'ConnectO',
+                      'PROFILE',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 18,
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                    Spacer(),
-                    Icon(
-                      Icons.chat_rounded,
-                    )
                   ],
                 ),
               ),
+              Container(
+                height: 120,
+                width: 120,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(120),
+                  image: DecorationImage(
+                    image: NetworkImage(peopleImage[2]),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Rohan Gupta',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'rohan.gupta@gmail.com',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 0, 20, 20),
+                padding: const EdgeInsets.fromLTRB(15, 40, 15, 20),
                 child: ListView.builder(
-                    itemCount: feedImageList.length,
                     physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
+                    itemCount: 5,
                     itemBuilder: (context, index) {
-                      return Column(
-                        children: [
-                          SizedBox(height: 20),
-                          Row(
-                            children: [
-                              Container(
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30),
-                                  image: DecorationImage(
-                                    image: NetworkImage(peopleImage[index]),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(width: 20),
-                              Text(
-                                names[index],
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            ],
+                      return Card(
+                        child: ListTile(
+                          leading: Icon(
+                            profileIcons[index],
+                            color: Colors.white70,
                           ),
-                          SizedBox(height: 8),
-                          Container(
-                            height: 284,
-                            width: 324,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(13),
-                              image: DecorationImage(
-                                image: NetworkImage(feedImageList[index]),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
+                          title: Text(profileSettings[index]),
+                          trailing: Icon(
+                            Icons.arrow_forward_ios_outlined,
+                            size: 15,
+                            color: Colors.white70,
                           ),
-                        ],
+                        ),
                       );
                     }),
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 15, left: 15, right: 15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                height: 48,
+                width: 144,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(38),
+                  gradient: RadialGradient(
+                    center: Alignment.topRight,
+                    radius: 6,
+                    colors: [
+                      Color(0xffB210FF),
+                      Color(0xff5200FF),
+                    ],
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0x40000000),
+                      offset: Offset(0, -18),
+                      blurRadius: 28,
+                    ),
+                  ],
+                ),
+                child: Center(
+                  child: Text(
+                    'Be a Creator',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

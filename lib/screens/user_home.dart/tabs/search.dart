@@ -26,6 +26,7 @@ class SearchScreen extends StatelessWidget {
           SizedBox(
             height: Get.height - 200,
             child: GridView.builder(
+                physics: BouncingScrollPhysics(),
                 itemCount: categories.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     childAspectRatio: 1.2, crossAxisCount: 2),
@@ -39,10 +40,15 @@ class SearchScreen extends StatelessWidget {
                       gradient: RadialGradient(
                         center: Alignment.topRight,
                         radius: 2,
-                        colors: [
-                          Color(0xffB210FF),
-                          Color(0xff5200FF),
-                        ],
+                        colors: index == 0
+                            ? [
+                                Colors.redAccent,
+                                Colors.orangeAccent,
+                              ]
+                            : [
+                                Color(0xffB210FF),
+                                Color(0xff5200FF),
+                              ],
                       ),
                     ),
                     child: Center(

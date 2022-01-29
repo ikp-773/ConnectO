@@ -1,4 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 List feedImageList = [
   'https://images.pexels.com/photos/102127/pexels-photo-102127.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -49,4 +53,20 @@ List categories = [
   'Instrumentalist',
   'Keyboard',
   'Art',
+];
+
+List profileIcons = [
+  Icons.person_outline_rounded,
+  Icons.video_collection_rounded,
+  Icons.account_balance_wallet_rounded,
+  Icons.help_rounded,
+  Icons.settings_rounded,
+];
+
+List profileSettings = [
+  'My Account',
+  'Subscriptions',
+  'My Wallet',
+  'Help',
+  'Settings'
 ];
