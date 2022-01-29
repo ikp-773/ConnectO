@@ -95,7 +95,7 @@ class LogInPage extends StatelessWidget {
               SizedBox(height: 45),
               InkWell(
                 onTap: () {
-                  Get.to(HomePageUser(), transition: Transition.cupertino);
+                  Get.offAll(HomePageUser(), transition: Transition.cupertino);
                 },
                 child: Container(
                   height: 45,

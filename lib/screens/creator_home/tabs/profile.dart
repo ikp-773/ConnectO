@@ -1,12 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:connecto/screens/creator_home/home.dart';
+import 'package:connecto/screens/creator_home/creater_data.dart';
+import 'package:connecto/screens/user_home.dart/home.dart';
 import 'package:connecto/screens/user_home.dart/home_data.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class UserProfilePage extends StatelessWidget {
-  const UserProfilePage({Key? key}) : super(key: key);
+class CreatorProfilePage extends StatelessWidget {
+  const CreatorProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class UserProfilePage extends StatelessWidget {
                     ),
                     SizedBox(width: Get.width / 4.5),
                     Text(
-                      'PROFILE',
+                      'CREATOR',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
@@ -48,16 +49,67 @@ class UserProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(120),
-                  image: DecorationImage(
-                    image: NetworkImage(peopleImage[4]),
-                    fit: BoxFit.cover,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    height: 120,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(120),
+                      image: DecorationImage(
+                        image: NetworkImage(peopleImage[4]),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
-                ),
+                  Container(
+                    height: 109,
+                    width: 162,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x40000000),
+                          offset: Offset(0, 13),
+                          blurRadius: 28,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Subscribers',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black54,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Icon(
+                              Icons.people_rounded,
+                              color: Colors.black54,
+                            ),
+                            Text(
+                              '120',
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black54,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               ),
               SizedBox(height: 20),
               Text(
@@ -80,15 +132,15 @@ class UserProfilePage extends StatelessWidget {
                 child: ListView.builder(
                     physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
-                    itemCount: 5,
+                    itemCount: creatorProfileSettings.length,
                     itemBuilder: (context, index) {
                       return Card(
                         child: ListTile(
                           leading: Icon(
-                            profileIcons[index],
+                            creatorProfileIcons[index],
                             color: Colors.white70,
                           ),
-                          title: Text(profileSettings[index]),
+                          title: Text(creatorProfileSettings[index]),
                           trailing: Icon(
                             Icons.arrow_forward_ios_outlined,
                             size: 15,
@@ -99,16 +151,13 @@ class UserProfilePage extends StatelessWidget {
                     }),
               ),
               InkWell(
-                onTap: () => Get.off(
-                  HomePageCreator(),
-                  transition: Transition.circularReveal,
-                ),
+                onTap: () => Get.off(HomePageUser()),
                 child: Container(
-                  margin: EdgeInsets.only(bottom: 24, left: 15, right: 15),
+                  margin: EdgeInsets.only(bottom: 26, left: 15, right: 15),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   height: 48,
-                  width: 144,
+                  width: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(38),
                     gradient: RadialGradient(
@@ -129,7 +178,7 @@ class UserProfilePage extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      'Be a Creator',
+                      'Exit Creator Mode',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,

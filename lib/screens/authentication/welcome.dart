@@ -23,11 +23,21 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(38, 10, 40, 5),
+            padding: EdgeInsets.fromLTRB(38, 10, 40, 0),
             child: Text(
-              'Welcome to ConnectO',
+              'Welcome to ',
               style: TextStyle(
-                fontSize: 36,
+                fontSize: 30,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(38, 0, 40, 5),
+            child: Text(
+              'ConnectO',
+              style: TextStyle(
+                fontSize: 46,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -35,7 +45,7 @@ class WelcomePage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.fromLTRB(38, 0, 40, 0),
             child: Text(
-              'empowering talents',
+              'with those with Passion',
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
@@ -44,7 +54,7 @@ class WelcomePage extends StatelessWidget {
           ),
           Spacer(),
           Container(
-            height: Get.height * .47,
+            height: Get.height * .45,
             width: Get.width,
             decoration: BoxDecoration(
               gradient: appGradiant(),
@@ -127,13 +137,13 @@ class WelcomePage extends StatelessWidget {
                 ),
                 Spacer(),
                 Text(
-                  'love from Team Bang',
+                  'made with lov3 from Team Bang',
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
                       color: Colors.black38),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 15),
               ],
             ),
           )
