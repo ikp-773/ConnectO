@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:connecto/screens/user_home.dart/tabs/feed.dart';
+import 'package:connecto/screens/user_home.dart/tabs/notifications.dart';
 import 'package:flutter/material.dart';
 
 class HomePageUser extends StatefulWidget {
@@ -15,9 +16,9 @@ class _HomePageUserState extends State<HomePageUser> {
   bool isSelected = true;
   List<Widget> screens = [
     FeedPage(),
-    FeedPage(),
-    FeedPage(),
-    FeedPage(),
+    Container(),
+    NotificationsPage(),
+    Container(),
   ];
 
   @override

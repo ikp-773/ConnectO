@@ -17,8 +17,15 @@ class WelcomePage extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.fromLTRB(38, 100, 40, 5),
+            child: Image.asset(
+              'assets/logo.png',
+              height: 100,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(38, 10, 40, 5),
             child: Text(
-              'Welcome to Connecto',
+              'Welcome to ConnectO',
               style: TextStyle(
                 fontSize: 36,
                 fontWeight: FontWeight.w700,

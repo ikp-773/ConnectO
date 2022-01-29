@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:connecto/screens/user_home.dart/home_data.dart';
-import 'package:connecto/styling/colors.dart';
 import 'package:flutter/material.dart';
 
 class FeedPage extends StatelessWidget {
@@ -27,11 +26,18 @@ class FeedPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(38, 10, 20, 10),
+                padding: EdgeInsets.fromLTRB(18, 10, 20, 0),
                 child: Row(
                   children: [
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                      child: Image.asset(
+                        'assets/logo.png',
+                        height: 35,
+                      ),
+                    ),
                     Text(
-                      'Connecto',
+                      'ConnectO',
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,

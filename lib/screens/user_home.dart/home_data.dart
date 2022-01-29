@@ -16,6 +16,9 @@ List peopleImage = [
   'https://images.pexels.com/photos/4829001/pexels-photo-4829001.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   'https://images.pexels.com/photos/9940861/pexels-photo-9940861.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   'https://images.pexels.com/photos/4830130/pexels-photo-4830130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/10003337/pexels-photo-10003337.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/9944909/pexels-photo-9944909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/6274493/pexels-photo-6274493.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
 ];
 
 List names = [
@@ -25,5 +28,8 @@ List names = [
   'Kalipada Ghoshal',
   'Maniam',
   'Odoardo Fialetti',
-  'Benvenuto Tisi'
+  'Benvenuto Tisi',
+  'Cesare Nebbia',
+  'Nosadella',
+  'Parmigianino',
 ];
