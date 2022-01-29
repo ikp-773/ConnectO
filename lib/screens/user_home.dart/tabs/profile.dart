@@ -2,6 +2,7 @@
 
 import 'package:connecto/screens/creator_home/home.dart';
 import 'package:connecto/screens/user_home.dart/home_data.dart';
+import 'package:connecto/screens/wallet/user_wallet.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -84,6 +85,7 @@ class UserProfilePage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return Card(
                         child: ListTile(
+                          onTap: () => Get.to(UserWalletPage()),
                           leading: Icon(
                             profileIcons[index],
                             color: Colors.white70,
