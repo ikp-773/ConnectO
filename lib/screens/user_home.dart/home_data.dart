@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 List feedImageList = [
   'https://images.pexels.com/photos/102127/pexels-photo-102127.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   'https://images.pexels.com/photos/962312/pexels-photo-962312.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
@@ -32,4 +34,19 @@ List names = [
   'Cesare Nebbia',
   'Nosadella',
   'Parmigianino',
+];
+
+List categories = [
+  'Live',
+  'Music',
+  'Illustration',
+  'Graphic Design',
+  'Crafts',
+  'Dance',
+  'Cinema',
+  'Painting',
+  'Beatbox',
+  'Instrumentalist',
+  'Keyboard',
+  'Art',
 ];

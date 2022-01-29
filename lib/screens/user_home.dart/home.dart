@@ -2,6 +2,8 @@
 
 import 'package:connecto/screens/user_home.dart/tabs/feed.dart';
 import 'package:connecto/screens/user_home.dart/tabs/notifications.dart';
+import 'package:connecto/screens/user_home.dart/tabs/profile.dart';
+import 'package:connecto/screens/user_home.dart/tabs/search.dart';
 import 'package:flutter/material.dart';
 
 class HomePageUser extends StatefulWidget {
@@ -16,9 +18,9 @@ class _HomePageUserState extends State<HomePageUser> {
   bool isSelected = true;
   List<Widget> screens = [
     FeedPage(),
-    Container(),
+    SearchScreen(),
     NotificationsPage(),
-    Container(),
+    UserProfilePage(),
   ];
 
   @override
