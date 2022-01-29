@@ -30,7 +30,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
             contentPadding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             fillColor: Colors.white,
             filled: true,
-            labelStyle: const TextStyle(
+            hintStyle: const TextStyle(
               fontSize: 18,
               color: Color(0x88585656),
             ),

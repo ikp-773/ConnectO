@@ -16,7 +16,10 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SIGN IN'),
+        title: Text(
+          'SIGN IN',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
         automaticallyImplyLeading: false,
@@ -40,110 +43,104 @@ class SignInPage extends StatelessWidget {
             ),
           ],
         ),
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(25, 100, 25, 19),
-              child: TextFormField(
-                  style: smallTextStyle,
-                  decoration:
-                      textFieldDecoration.copyWith(hintText: 'Username'),
-                  validator: (value) =>
-                      value!.isEmail ? 'Enter a valid email' : null,
-                  onChanged: (value) {}),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(25, 6, 25, 19),
-              child: TextFormField(
-                  style: TextStyle(
-                    fontSize: 13,
-                  ),
-                  decoration: textFieldDecoration.copyWith(hintText: 'Email'),
-                  validator: (value) =>
-                      value!.isEmail ? 'Enter a valid email' : null,
-                  onChanged: (value) {}),
-            ),
-            PasswordTextField(),
-            Padding(
-              padding: const EdgeInsets.only(right: 25.0),
-              child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Text('Forgot Password ?')),
-            ),
-            SizedBox(height: 40),
-            Text(
-              'Or sign in with',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 18,
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(25, 100, 25, 19),
+                child: TextFormField(
+                    style: smallTextStyle,
+                    decoration:
+                        textFieldDecoration.copyWith(hintText: 'Username'),
+                    onChanged: (value) {}),
               ),
-            ),
-            SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/icons/google_icon.png',
-                  height: 37,
-                ),
-                SizedBox(width: 17),
-                Image.asset(
-                  'assets/icons/twitter_icon.png',
-                  height: 37,
-                ),
-                SizedBox(width: 17),
-                Image.asset(
-                  'assets/icons/fb_icon.png',
-                  height: 37,
-                ),
-              ],
-            ),
-            SizedBox(height: 45),
-            InkWell(
-              onTap: () {
-                Get.to(SignInPage());
-              },
-              child: Container(
-                height: 45,
-                width: 226,
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(45),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0x40000000),
-                      offset: Offset(0, 7),
-                      blurRadius: 23,
+              Padding(
+                padding: EdgeInsets.fromLTRB(25, 6, 25, 19),
+                child: TextFormField(
+                    style: TextStyle(
+                      fontSize: 13,
                     ),
-                  ],
-                ),
-                child: Center(
-                  child: Text(
-                    'CREATE ACCOUNT',
-                    style: TextStyle(fontSize: 18),
-                  ),
+                    decoration: textFieldDecoration.copyWith(hintText: 'Email'),
+                    keyboardType: TextInputType.emailAddress,
+                    onChanged: (value) {}),
+              ),
+              PasswordTextField(),
+              SizedBox(height: 40),
+              Text(
+                'Or sign in with',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
                 ),
               ),
-            ),
-            Spacer(),
-            RichText(
-              text: TextSpan(
-                text: 'Have an account ? ',
-                style: TextStyle(fontSize: 18, color: Colors.black),
-                children: <TextSpan>[
-                  TextSpan(
-                      text: 'Log In',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600, color: Colors.white),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          Get.off(LogInPage());
-                        }),
+              SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/icons/google_icon.png',
+                    height: 37,
+                  ),
+                  SizedBox(width: 17),
+                  Image.asset(
+                    'assets/icons/twitter_icon.png',
+                    height: 37,
+                  ),
+                  SizedBox(width: 17),
+                  Image.asset(
+                    'assets/icons/fb_icon.png',
+                    height: 37,
+                  ),
                 ],
               ),
-            ),
-            SizedBox(height: 15),
-          ],
+              SizedBox(height: 45),
+              InkWell(
+                onTap: () {
+                  Get.to(SignInPage());
+                },
+                child: Container(
+                  height: 45,
+                  width: 226,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(45),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0x40000000),
+                        offset: Offset(0, 7),
+                        blurRadius: 23,
+                      ),
+                    ],
+                  ),
+                  child: Center(
+                    child: Text(
+                      'CREATE ACCOUNT',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              RichText(
+                text: TextSpan(
+                  text: 'Have an account ? ',
+                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: 'Log In',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600, color: Colors.white),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Get.off(LogInPage());
+                          }),
+                  ],
+                ),
+              ),
+              SizedBox(height: 15),
+            ],
+          ),
         ),
       ),
     );
