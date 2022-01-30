@@ -1,11 +1,11 @@
-![Banner](https://drive.google.com/file/d/16gwIrwvkayOZrvauCNuxDnsWY9KdNlLK/view?usp=sharing)
+
 # ConnectO
 
 ![](https://img.shields.io/badge/CONTRIBUTORS-4-brightgreen?color=green&style=for-the-badge) 
 ![](https://img.shields.io/github/languages/top/ikp-773/ConnectO?style=for-the-badge) 
 ![](https://img.shields.io/github/languages/code-size/ikp-773/Connecto?color=orange&style=for-the-badge) 
 
-Cov Ahead is a mobile application where shopkeepers have an app that shows QR code and users can scan this QR code which will automatically add that user to the visitor list. This should replace manual entry of contact details in the shop due to COVID. 
+ConnectO provides a platform to support amateur artists, online small business and content creators to showcase their talents, sell their art and craft and make a small profit out of it by letting the audience make generous contributions towards them.
 
 [![](https://img.shields.io/badge/APK-ConnectO-brightgreen?color=purple&style=for-the-badge)](https://drive.google.com/file/d/1JXxPOr40lmzdkGTT5bufVmg8VdcRAB5n/view?usp=sharing)
 
@@ -26,16 +26,17 @@ Cov Ahead is a mobile application where shopkeepers have an app that shows QR co
 
 [Case Study to Understand what users want](https://venngage.net/ps/INFrzHevS8/connecto-case-study)
 
-## How it Works ?
+## Why This ?
 
-Google Firebase is used as the backend. Firestore as the database for storing both customer and merchant data. Firebase authentication to authenticate users: Using Google sign in or Email and password.
+The reason why we chose this problem as our project is because 	most of the social media artists have a hard time creating content and not getting enough response and benefits as they expect. This could demotivate them into discontinuing what they are good at. Some amateur artists who have a difficult time finding a stable job might want at least some income in their life to sustain them.
+Hence, we came with the solution…that is ConnectO. ConnectO is that platform which serves the purpose. In ConnectO you can let your fans become active participants in the work they love by offering them a monthly membership. You give them access to exclusive content, community, and insight into your creative process. In exchange, you get the freedom to do your best work, and the stability you need to build an independent creative career.
+Now coming to the tools, we have used figma for designing, flutter for creating the app, to conduct a survey we used google forms, canva for presentation, and venngage for the case study.
+From the survey conducted by us we came to the conclusion that 64.3% has a social media handle for displaying their artistic talents but 71.4% are dissatisfied with the amount of exposure they get.
+Therefore we asked whether they would want an app like Connecto and astoundingly more than half of them are very much into the idea.
+Here we have the statistics of how much the artist and the supporters would like to interact with each other.
+Ultimately, 78.6% would like to showcase and sell their artwork as well as buy them and also interact with their supporters. 
 
-QR code is generated for merchants using pretty_qr_code package, and the data encoded is the merchant UID. For customer part, scanning of QR code is facilitated by qr_code_scanner. On succesfull scanning of QR code, the data is compared with existing merchant UID and if a match is present, user is shown confirmation screen and the footprint is marked in both the merchant and customer side.
-
-1. This application is for both customers and shop owners.
-2. Once you choose your role you are requested to Sign In. 
-3. For customer it directly takes you to QR scanner. You could also update your information and check the shops you have visited.
-4. For shop owners once they sign Up they are taken to their dashboard to show all the people that visited the shop. You can also update the shop details anytime and view your own QR code.
+Through this app of ours we hope to reach out to those undervalued artists out there who can have a source of income which will allow them to stand on their own feet and be proud of the talent they have. We wish ConnectO provides the support that an emerging youth needs to explore and navigate their life's focus on.
 
 ## Libraries used
 -   get: ^4.6.1
